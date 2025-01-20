@@ -1,0 +1,9 @@
+CREATE TABLE answers (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  topic_id BIGINT NOT NULL,
+  user_id BIGINT NOT NULL,
+  message TEXT NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (topic_id) REFERENCES topics(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);

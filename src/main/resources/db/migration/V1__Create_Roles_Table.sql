@@ -1,0 +1,7 @@
+-- V1__Create_Roles_table.sql
+CREATE TABLE roles (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL UNIQUE
+);
+
+INSERT INTO roles (name) VALUES ('ROLE_USER'), ('ROLE_ADMIN');
